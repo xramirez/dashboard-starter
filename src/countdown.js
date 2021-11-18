@@ -1,6 +1,6 @@
 
 
-class Test{
+class Countdown{
     var1;
     var2;
     constructor(var1, var2){
@@ -13,12 +13,12 @@ class Test{
     }
 
     render(){
-        const test = document.querySelector('.pane1');
-        setInterval(()=>test.innerHTML=this.var1++,1000);
+        const pane1 = document.querySelector('.pane1');
+        setInterval(()=>pane1.innerHTML=this.var1++,1000);
     }
 
 
 
 }
 
-export default Test;
+export default Countdown;
