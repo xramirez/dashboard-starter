@@ -1,20 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Dashboard</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
 </head>
+
 <body>
+    <div class="navbar">
+        <h1>Xavi's Dashboard</h1>
+        <div class="nav-links">
+            <a href="https://www.youtube.com">Youtube</a><a href="https://www.reddit.com">Reddit</a><a
+                href="https://github.com">GitHub</a><a href="https://discord.com/channels/@me">Discord</a>
+        </div>
+    </div>
     <div class="container">
-        <div class="pane pane1">1</div>
-        <div class="pane pane2"><img src="https://media3.giphy.com/media/iDJQRjTCenF7A4BRyU/giphy.gif?cid=021aea08dhb71c4pws34xkce34prvkwveycgr4fstdk5g5ok&rid=giphy.gif&ct=g" alt=""></div>
+        <div class="pane pane1">
+            <div class="task-header">
+                <h1 style="padding-right: 10px">To-Do List</h1>
+                <button class="make-task">Create Task</button>
+            </div>
+            <div class="task-list">
+                <form id='task-list'></form>
+            </div>
+            <form class="task-form" style="display:none">
+                <div class="form-group">
+                    <label for="task">Task:</label>
+                    <input type="text" name="task" id="task">
+                </div>
+                <div class="form-group">
+                    <label for="repeat">Repeat?</label>
+                    <select name="repeat" id="repeat">
+                        <option value="none">Don't Repeat</option>
+                        <option value="daily">Daily</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="priority">Priority:</label>
+                    <select name="priority" id="priority">
+                        <option value="1">1</option>
+                        <option value="2" style="color:green">2!</option>
+                        <option value="3" style="color:yellow">3!!</option>
+                        <option value="4" style="color:red">4!!!</option>
+                    </select>
+                </div>
+                <input type="button" value="Submit Task" class="submit-button">
+            </form>
+        </div>
+        <div class="pane pane2 calendar">
+            <iframe
+                src="https://calendar.google.com/calendar/embed?height=550&wkst=1&bgcolor=%23009688&ctz=America%2FChicago&title=Xavi's%20Calendar&showPrint=0&showTabs=0&showTz=0&showCalendars=0&src=eGVyYW1pcmV6MTk5N0BnbWFpbC5jb20&src=YWRkcmVzc2Jvb2sjY29udGFjdHNAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23039BE5&color=%2333B679&color=%230B8043"
+                style="border-width:0" width="850" height="550" frameborder="0" scrolling="no"></iframe>
+        </div>
         <div class="pane pane3">3</div>
-        <div class="pane pane4">4</div>
+        <div class="pane pane4"></div>
+        <div class="pane pane5">5</div>
     </div>
 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="main.js" type="module"></script>
 </body>
+
 </html>

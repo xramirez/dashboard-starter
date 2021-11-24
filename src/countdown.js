@@ -13,6 +13,7 @@ class Countdown{
     }
 
     render(){
+        //console.log("I made it this far");
         const pane1 = document.querySelector('.pane1');
         setInterval(()=>pane1.innerHTML=this.var1++,1000);
     }

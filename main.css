@@ -1,30 +1,148 @@
+@import url("https://fonts.googleapis.com/css?family=Anton|Outfit&display=swap");
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding : 0;
+    font-family: "Outfit"
 }
+
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: whitesmoke
+}
+.navbar a{
+    font-size: large;
+    margin: 0 20px;
+    text-decoration: none;
+    color: burlywood;
+}
+.navbar a:hover {
+    color:rgba(63,107,169, 0.5)
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
-    height:400px;
-    width:800px;
+    height:100%;
+    width:100%;
     margin:0 auto;
+    background-color: #42378f;
+    background-image: linear-gradient(315deg, #42378f 0%, #f53844 74%);
 }
 
 .pane{
-   
-  width:350px;
-  height:300px;
-    border: 1px solid black;
+    background-size : cover;
+    margin : 15px auto;
 }
 
 .pane1{
+    border: 1px solid gray;
+    height : 550px;
+    width : 300px;
     display: flex;
+    flex-direction : column;
     align-items: center;
     justify-content: center;
+    margin-right : 25px;
+    background-color :whitesmoke;
+    border-radius : 10px;
 }
 
-.gif{
-    width:100%;
-    height:100%;
-    overflow: hidden;
+.pane1 .task-header {
+    display: flex;
+    position: absolute;
+    top: 80px;
+    flex-direction: row;
+    color :#ff6347
+}
+
+.pane1 .task-list {
+    flex-direction : column;
+    width: 75%;
+    height: 60%;
+    overflow: auto;
+}
+.pane1 .task-form {
+    flex-direction : column;
+}
+
+.pane1 .form-group{
+    flex-direction: row;
+    padding : 10px 0;
+}
+
+.del-button {
+    float: right;
+    border: none;
+    background: none;
+    color: crimson;
+}
+
+.del-button:hover {
+    color: maroon;
+}
+
+.pane2 {
+    max-height : 600px;
+    max-width : 800px;
+    margin-left: 25px;
+}
+.pane2 iframe {
+    border-radius : 15px;
+    padding: auto 10px;
+}
+
+.pane3 {
+    display : flex;
+    font-size : larger;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("./src/cloudy.gif");
+    height : 400px;
+    width : 400px;
+    border-radius : 10%;
+    margin-right: 20px;
+    margin-left: 120px;
+}
+
+.pane4 {
+    width : 500px;
+    height : 400px;
+    background-size: auto;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-weight: bold;
+    color : rgba(173, 255, 47, 0.6);
+    text-shadow: 3px 3px 0px rgba(63,107,169, 0.5);
+    font-family : "Anton";
+    text-align : center;
+    border-radius: 15px;
+    margin-left: 20px;
+    background-position: center;
+    margin-right: 40px;
+
+}
+
+.pane5 {
+    width: 150px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-left: 40px;
+}
+
+span.date{
+    font-size: x-large;
 }

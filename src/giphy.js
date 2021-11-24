@@ -7,11 +7,13 @@ class Giphy{
     }
 
     getGif(search){
+        //console.log("I made it this far");
         return fetch(`https://api.giphy.com/v1/gifs/search?api_key=${this.api_key}&q=${search}&limit=1`)
     }
 
     
     render(){
+        //console.log("I made it this far");
         let counter =0;
         setInterval(async()=>{
             if(counter===this.gifArr.length) counter=0;
