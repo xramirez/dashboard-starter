@@ -133,7 +133,7 @@
 }
 
 .pane5 {
-    width: 150px;
+    width: 200px;
     height: 400px;
     display: flex;
     justify-content: center;
@@ -141,6 +141,7 @@
     flex-direction: column;
     text-align: center;
     margin-left: 40px;
+    overflow: auto;
 }
 
 span.date{
